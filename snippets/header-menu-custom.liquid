@@ -5,46 +5,123 @@
   {% render 'header-mega-menu' %}
 {% endcomment %}
 {%- style -%}
-.header {
-    display: flex !important;
-}
-.menu-custom {
-  margin-left: auto !important;
-}
-.mega-menu__content {
-  opacity: 0;
-  transform: translateY(-10px);
-  visibility: hidden;
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out, visibility 0.5s;
-  left : auto;
-  right : auto;
-  /* width : 100vw; */
-}
-.mega-menu:hover .mega-menu__content {
-  opacity: 1;
-  transform: translateY(0);
-  visibility: visible;
-}
+  .header__inline-menu {
+    font-family: 'Poppins', sans-serif;
+  }
+  @media (min-width: 900px) {
+    .header {
+      display: flex !important;
+    }
+    .menu-custom {
+      margin-left: auto !important;
+    }
+    .mega-menu__content {
+      opacity: 0;
+      transform: translateY(-10px);
+      visibility: hidden;
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out, visibility 0.5s;
+      left: auto;
+    }
+    .mega-menu:hover .mega-menu__content {
+      opacity: 1;
+      transform: translateY(0);
+      visibility: visible;
+    }
 
-.header__active-menu-item {
-  text-decoration: none;
-}
+    .header__active-menu-item {
+      text-decoration: none;
+    }
 
-.mega-menu__link--active {
-  text-decoration: none;
-}
-.mega-menu__list {
-  grid-template-columns: repeat(auto-fit, minmax(0px, 1fr));
-}
+    .mega-menu__link--active {
+      text-decoration: none;
+    }
+    .mega-menu__list {
+      grid-template-columns: repeat(auto-fit, minmax(0px, 1fr));
+    }
 
+    .header__inline-menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-.mega-menu__content {
-  opacity: 1;
-  transform: translateY(0);
-  visibility: visible;
-  display : block;
-}
+    .list-menu__item {
+      text-decoration: none;
+    }
+    .header__active-menu-item,
+    .header__menu-item {
+      font-size: 1.7rem;
+      text-decoration: none;
+      color: white;
+    }
 
+    .mega-menu__link--level-2 {
+      font-size: 2rem;
+      padding-bottom: 1rem;
+    }
+
+    .mega-menu__link:hover,
+    .mega-menu__link--level-2:hover,
+    .mega-menu__link--level-3:hover {
+      color: #ff6347;
+      text-decoration: underline;
+      text-decoration-color: #ff6347;
+    }
+    .header__menu-item:hover span {
+      text-decoration: none;
+      color: #ff6347;
+      text-decoration-color: #ff6347;
+      border-bottom: 2px solid #ff6347;
+    }
+
+    .header__menu-item,
+    .mega-menu__link {
+      text-decoration: none;
+    }
+
+    .header__menu-item {
+      padding-right: 2.7rem;
+    }
+    .lets-talk-container a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      border: 1px solid white;
+      padding: 1.2rem 3rem;
+      background: linear-gradient(90deg, #4a90e2 0%, #e2844a 100%);
+      background-size: 200% 100%;
+      transition: all 0.5s ease;
+      overflow: hidden;
+    }
+
+    .lets-talk-container {
+      padding-left: 1.5rem;
+    }
+
+    .lets-talk-container .header__menu-item span {
+      border-bottom: none;
+      color: white;
+      transition: all 0.5s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .lets-talk-container:hover {
+      background-position: 100% 0;
+      transform: scale(1.05);
+    }
+
+    .lets-talk-container:hover .header__menu-item span {
+      color: white;
+    }
+
+    .lets-talk-container .bi-arrow-right {
+      transition: transform 0.5s ease;
+    }
+
+  }
 {%- endstyle -%}
 
 <nav class="header__inline-menu menu-custom">
@@ -132,5 +209,23 @@
         {%- endif -%}
       </li>
     {%- endfor -%}
+    <li class="lets-talk-container">
+      <a
+        id="HeaderMenu-{{ link.handle }}"
+        href="{{ link.url }}"
+        class="header__menu-item list-menu__item link link--text focus-inset"
+        {% if link.current %}
+          aria-current="page"
+        {% endif %}
+      >
+        <span
+          {%- if link.current %}
+            class="header__active-menu-item"
+          {% endif %}
+        >
+          Let's talk<i class="bi bi-arrow-right"></i>
+        </span>
+      </a>
+    </li>
   </ul>
 </nav>
