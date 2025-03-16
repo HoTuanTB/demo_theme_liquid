@@ -85,6 +85,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/image2.webp",
+            "image_mobile": "shopify://shop_images/mb1.webp",
             "image_overlay_opacity": 0,
             "heading": "Trusted to deliver",
             "heading_size": "hxl",
@@ -103,6 +104,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/imag1.webp",
+            "image_mobile": "shopify://shop_images/mb2.webp",
             "image_overlay_opacity": 0,
             "heading": "We are trusted by the experts because we are the experts",
             "heading_size": "hxl",
@@ -121,6 +123,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/image3.webp",
+            "image_mobile": "shopify://shop_images/mb3.webp",
             "image_overlay_opacity": 0,
             "heading": "Innovative digital experiences that simply work",
             "heading_size": "hxl",
