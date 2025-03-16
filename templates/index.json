@@ -1,75 +1,192 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "banner_balance_JKxYmE": {
+      "type": "banner-balance",
+      "settings": {
+        "title_1": "Digital",
+        "title_2": "Experience",
+        "title_3": "Agency",
+        "button_label_1": "Our Services",
+        "button_link_1": "",
+        "button_label_2": "Our Work",
+        "button_link_2": "",
+        "button_label_3": "Let's Talk",
+        "button_link_3": ""
+      }
+    },
+    "multicolumn_r3cNXE": {
+      "type": "multicolumn",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "column_6U6kRV": {
+          "type": "column",
           "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
+            "title": "Column",
+            "text": "<p>With a presence in over 100 countries, Balance clients have access to the Groupe’s complementary skills and services, from consulting to execution, to drive digital transformation. United by a common purpose, we work alongside other best-in-class agencies to unlock growth, operating under ‘The Power of One’; a borderless and seamless service driving the alchemy of creativity and technology.</p>",
+            "link_label": "",
+            "link": ""
           }
         },
-        "button": {
-          "type": "buttons",
+        "column_RiKNzC": {
+          "type": "column",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "title": "Column",
+            "text": "<p>With a presence in over 100 countries, Balance clients have access to the Groupe’s complementary skills and services, from consulting to execution, to drive digital transformation. United by a common purpose, we work alongside other best-in-class agencies to unlock growth, operating under ‘The Power of One’; a borderless and seamless service driving the alchemy of creativity and technology.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_KQrJhd": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>With a presence in over 100 countries, Balance clients have access to the Groupe’s complementary skills and services, from consulting to execution, to drive digital transformation. United by a common purpose, we work alongside other best-in-class agencies to unlock growth, operating under ‘The Power of One’; a borderless and seamless service driving the alchemy of creativity and technology.</p>",
+            "link_label": "",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "heading",
-        "button"
+        "column_6U6kRV",
+        "column_RiKNzC",
+        "column_KQrJhd"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "image_behavior": "none",
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Button label",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "scheme-4",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
+    "slideshow_cMmkzy": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_TwhkwP": {
+          "type": "slide",
+          "settings": {
+            "image_overlay_opacity": 0,
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": true,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": ""
+          }
+        },
+        "slide_Y6EDdc": {
+          "type": "slide",
+          "settings": {
+            "image_overlay_opacity": 0,
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": true,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_TwhkwP",
+        "slide_Y6EDdc"
+      ],
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "color_scheme": "scheme-1",
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "swipe_on_mobile": false,
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "padding_top": 44,
-        "padding_bottom": 36
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "inset_balance_BNXFAX": {
+      "type": "inset-balance",
+      "blocks": {
+        "slide_c3CHxG": {
+          "type": "slide",
+          "settings": {
+            "image_overlay_opacity": 0,
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": true,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": ""
+          }
+        },
+        "slide_aTU8mr": {
+          "type": "slide",
+          "settings": {
+            "image_overlay_opacity": 0,
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": true,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_c3CHxG",
+        "slide_aTU8mr"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
       }
     }
   },
   "order": [
-    "image_banner",
-    "featured_collection"
+    "banner_balance_JKxYmE",
+    "multicolumn_r3cNXE",
+    "slideshow_cMmkzy",
+    "inset_balance_BNXFAX"
   ]
 }
