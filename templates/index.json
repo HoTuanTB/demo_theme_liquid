@@ -74,8 +74,8 @@
         "color_scheme": "scheme-b2d8bb16-4a08-4c1c-b44f-fc1c43d5dc8c",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "inset_balance_DeCjQQ": {
