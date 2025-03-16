@@ -39,8 +39,9 @@
         "column_RiKNzC": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>With a presence in over 100 countries, Balance clients have access to the Groupe’s complementary skills and services, from consulting to execution, to drive digital transformation. United by a common purpose, we work alongside other best-in-class agencies to unlock growth, operating under ‘The Power of One’; a borderless and seamless service driving the alchemy of creativity and technology.</p>",
+            "image": "shopify://shop_images/sao.webp",
+            "title": "E-Commerce Agency of the Year 2024",
+            "text": "<p>It’s official: We’re the best! We are thrilled to announce that Balance is Campaign Asia’s E-commerce Agency of the Year for Australia and New Zealand 2024! This award recognises our leadership in crafting innovative commerce strategies, transforming customer experiences, and delivering exceptional growth for our partners. A huge thank you to our partners for trusting us with your success—and to the incredible Balance team for making it happen!</p>",
             "link_label": "",
             "link": ""
           }
