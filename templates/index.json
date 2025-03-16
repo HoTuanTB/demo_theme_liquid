@@ -154,11 +154,54 @@
         "show_text_below": false,
         "accessibility_info": ""
       }
+    },
+    "homepage_content_balance_6PyEyi": {
+      "type": "homepage-content-balance",
+      "blocks": {
+        "heading_hpzPF8": {
+          "type": "heading",
+          "settings": {
+            "heading": "Technology Partners.",
+            "heading_size": "hxxl",
+            "content_alignment": "left"
+          }
+        },
+        "heading_pGWNcd": {
+          "type": "heading",
+          "settings": {
+            "heading": "For high performing digital",
+            "heading_size": "h1",
+            "content_alignment": "right"
+          }
+        },
+        "heading_N3eHNK": {
+          "type": "heading",
+          "settings": {
+            "heading": "commerce solutions.",
+            "heading_size": "hxl",
+            "content_alignment": "right"
+          }
+        }
+      },
+      "block_order": [
+        "heading_hpzPF8",
+        "heading_pGWNcd",
+        "heading_N3eHNK"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "banner_balance_JKxYmE",
     "multicolumn_balance_XmmPTH",
-    "inset_balance_DeCjQQ"
+    "inset_balance_DeCjQQ",
+    "homepage_content_balance_6PyEyi"
   ]
 }
