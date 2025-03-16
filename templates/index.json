@@ -29,6 +29,7 @@
         "column_6U6kRV": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/a_public.webp",
             "title": "Column",
             "text": "<p>With a presence in over 100 countries, Balance clients have access to the Groupe’s complementary skills and services, from consulting to execution, to drive digital transformation. United by a common purpose, we work alongside other best-in-class agencies to unlock growth, operating under ‘The Power of One’; a borderless and seamless service driving the alchemy of creativity and technology.</p>",
             "link_label": "",
@@ -68,7 +69,7 @@
         "button_link": "",
         "columns_desktop": 3,
         "column_alignment": "left",
-        "background_style": "primary",
+        "background_style": "none",
         "color_scheme": "scheme-b2d8bb16-4a08-4c1c-b44f-fc1c43d5dc8c",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
