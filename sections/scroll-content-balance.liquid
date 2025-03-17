@@ -1,137 +1,22 @@
-{% comment %} Shopify Liquid Template {% endcomment %}
-
-<style>
-  
-  /* Default styles - Mobile First */
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: black;
-    font-family: 'Poppins', sans-serif;
-  }
-  .image-container img {
-    transition: opacity 0.5s ease-in-out;
-  }
-  /* Ẩn image-container trên mobile */
-  .image-container {
-    display: none;
-  }
-  .text-container {
-    width: 100%;
-    padding: 20px;
-  }
-  .block {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  .block img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    margin-bottom: 10px;
-  }
-  .text-section {
-    font-size: 18px;
-    line-height: 1.5;
-    opacity: 1;
-    margin-bottom: 40px;
-    color: white;
-    text-align: left;
-  }
-
-  .button-transparent {
-    background-image: url('https://www.balanceinternet.com.au/wp-content/themes/Balance%20Internet%202018%20-%20SASS/img/icon/go-circle-white.svg');
-    background-size: cover;
-    display: inline-block;
-    width: 48px;
-    height: 48px;
-    color: #fff;
-    margin-left: 20px;
-  }
-
-  .block :hover .button-transparent {
-    margin-left: 20px;
-    border-radius: 100%;
-    color: red;
-    background-color: red;
-  }
-  .text-section__title {
-    padding-top: 20px;
-  }
-  .text-section__button a {
-    padding-top: 20px;
-  }
-  .text-section__description {
-    padding-top: 20px;
-  }
-
-  @media (min-width: 768px) {
-    .wrapper {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-top: 40px;
-    }
-    /* Hiển thị image-container bên trái */
-    .image-container {
-      display: flex;
-      position: sticky;
-      top: 20px;
-      width: 55%;
-      height: 778px;
-      align-items: center;
-      justify-content: center;
-    }
-    .image-container img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      transition: opacity 0.5s ease-in-out;
-    }
-    .text-container {
-      width: 50%;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 100px;
-      padding: 100px;
-    }
-    .text-section {
-      font-size: 20px;
-      opacity: 0.5;
-      transition: opacity 0.3s;
-      text-align: left;
-      color: white;
-    }
-    .text-section.active {
-      opacity: 1;
-    }
-    /* Ẩn tất cả ảnh trong các block trên Desktop */
-    .block img {
-      display: none !important;
-    }
-    .text-section__title {
-      font-size: 48px;
-    }
-    .text-section__description {
-      font-size: 18px;
-    }
-  }
-</style>
-
 <div class="wrapper">
-  <!-- Desktop: Image Container hiển thị ảnh default bên trái -->
   <div class="image-container">
-    <img id="main-image" src="{{ section.blocks.first.settings.image | img_url: 'master' }}" alt="Main Image">
+    <img
+      id="main-image"
+      src="{{ section.blocks.first.settings.image | img_url: 'master' }}"
+      alt="Main Image"
+      width="1200"
+      height="800"
+    >
   </div>
-  <!-- Text Container chứa danh sách block -->
   <div class="text-container">
     {% for block in section.blocks %}
       <div class="block">
-        <!-- Trên Mobile: Hiển thị ảnh cho mỗi block -->
-        <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.title }}">
+        <img
+          src="{{ block.settings.image | img_url: 'master' }}"
+          alt="{{ block.settings.title }}"
+          width="1200"
+          height="800"
+        >
         <div class="text-section" data-image="{{ block.settings.image | img_url: 'master' }}">
           <p class="text-section__title">{{ block.settings.title }}</p>
           <p class="text-section__description">{{ block.settings.description }}</p>
@@ -150,45 +35,9 @@
   </div>
 </div>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    if (window.innerWidth >= 768) {
-      const sections = document.querySelectorAll('.text-section');
-      const image = document.getElementById('main-image');
-
-      let currentImage = "{{ section.blocks.first.settings.image | img_url: 'master' }}";
-
-      function changeImage() {
-        let scrollPosition = window.scrollY + window.innerHeight / 2;
-
-        sections.forEach((section) => {
-          const sectionTop = section.offsetTop;
-          const sectionHeight = section.offsetHeight;
-
-          if (scrollPosition > sectionTop && scrollPosition < sectionTop + sectionHeight) {
-            const newImage = section.getAttribute('data-image');
-            if (newImage !== currentImage) {
-              image.style.opacity = 0; // Làm mờ ảnh cũ
-              setTimeout(() => {
-                image.src = newImage;
-                image.style.opacity = 1; // Làm hiện ảnh mới
-                currentImage = newImage;
-              }, 500); // thời gian chuyển ảnh
-            }
-            sections.forEach((sec) => sec.classList.remove('active'));
-            section.classList.add('active');
-          }
-        });
-      }
-
-      window.addEventListener('scroll', changeImage);
-    }
-  });
-</script>
-
 {% schema %}
 {
-  "name": "Scrolling Image Section",
+  "name": "Scrolling content balance",
   "settings": [],
   "blocks": [
     {
@@ -215,7 +64,7 @@
   ],
   "presets": [
     {
-      "name": "Scrolling Image Section",
+      "name": "Scrolling Content Balance",
       "category": "Custom"
     }
   ]
