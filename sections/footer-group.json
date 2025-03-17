@@ -18,7 +18,9 @@
     "footer": {
       "type": "footer",
       "disabled": true,
-      "custom_css": [],
+      "custom_css": [
+        "oqps {display: none}"
+      ],
       "settings": {
         "color_scheme": "scheme-1",
         "newsletter_enable": false,
