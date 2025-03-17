@@ -258,6 +258,10 @@
         "text_section_6iCGBQ"
       ],
       "settings": {}
+    },
+    "mouse_cursor_balance_mm9ELy": {
+      "type": "mouse-cursor-balance",
+      "settings": {}
     }
   },
   "order": [
@@ -265,6 +269,7 @@
     "multicolumn_balance_XmmPTH",
     "inset_balance_DeCjQQ",
     "homepage_content_balance_6PyEyi",
-    "scroll_content_balance_rBMEmR"
+    "scroll_content_balance_rBMEmR",
+    "mouse_cursor_balance_mm9ELy"
   ]
 }
