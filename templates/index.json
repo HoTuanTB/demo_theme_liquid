@@ -196,12 +196,75 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "scroll_content_balance_rBMEmR": {
+      "type": "scroll-content-balance",
+      "blocks": {
+        "text_section_TNWGQz": {
+          "type": "text_section",
+          "settings": {
+            "title": "B2C Commerce",
+            "description": "At Balance innovative technology and expert strategy come together to drive digital success. We provide high-performing, digital commerce solutions for leading retailers.",
+            "image": "shopify://shop_images/sc1.webp"
+          }
+        },
+        "text_section_CFeWNH": {
+          "type": "text_section",
+          "settings": {
+            "title": "B2B Commerce",
+            "description": "We specialise in architecting B2B digital commerce solutions that align with your unique business requirements and goals.",
+            "image": "shopify://shop_images/222.webp"
+          }
+        },
+        "text_section_RUEUq8": {
+          "type": "text_section",
+          "settings": {
+            "title": "D2C Commerce",
+            "description": "Simplify your D2C experience with our innovative and intuitive solutions. We leverage world-class technology to deliver results and power seamless digital commerce experiences.",
+            "image": "shopify://shop_images/sc3.webp"
+          }
+        },
+        "text_section_R9tnCc": {
+          "type": "text_section",
+          "settings": {
+            "title": "Marketplace Commerce",
+            "description": "Balance’s marketplace design and development services can help you take your commerce to the next level. Our team of experts is dedicated to providing seamless integration and intuitive user experiences that ignite your marketplace and drive success.",
+            "image": "shopify://shop_images/sc2.webp"
+          }
+        },
+        "text_section_RE3jwK": {
+          "type": "text_section",
+          "settings": {
+            "title": "Commerce for Education",
+            "description": "Elevate the higher education experience with cutting-edge commerce solutions. Our innovative solutions improve engagement and drive revenue growth for top-ranking universities.",
+            "image": "shopify://shop_images/sc5.webp"
+          }
+        },
+        "text_section_6iCGBQ": {
+          "type": "text_section",
+          "settings": {
+            "title": "Digital Solutions for Government & Public Sector",
+            "description": "Our team of digital experts empowers government departments and public sector organisations to deliver innovative, secure and citizen-centric digital solutions.",
+            "image": "shopify://shop_images/sc6.webp"
+          }
+        }
+      },
+      "block_order": [
+        "text_section_TNWGQz",
+        "text_section_CFeWNH",
+        "text_section_RUEUq8",
+        "text_section_R9tnCc",
+        "text_section_RE3jwK",
+        "text_section_6iCGBQ"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "banner_balance_JKxYmE",
     "multicolumn_balance_XmmPTH",
     "inset_balance_DeCjQQ",
-    "homepage_content_balance_6PyEyi"
+    "homepage_content_balance_6PyEyi",
+    "scroll_content_balance_rBMEmR"
   ]
 }
