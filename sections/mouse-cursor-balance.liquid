@@ -1,0 +1,125 @@
+<style>
+  .private-mouse-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Nằm dưới text */
+    overflow: hidden;
+  }
+  .private-mouse-left-content {
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    max-width: 500px;
+    line-height: 1.5;
+    color: white;
+    font-size: 30px;
+  }
+  .private-mouse-line {
+    position: absolute;
+    width: 20px; 
+    height: 1px;
+    background-color: red;
+    transition: transform 0.1s ease-out, background-color 0.3s;
+  }
+  div:empty {
+    display: block;
+  }
+  .private-mouse-container-wrapper {
+    position: relative;
+    height: 100vh;
+    background-color: black;
+  }
+</style>
+
+<div class="private-mouse-container-wrapper">
+  <div class="private-mouse-container"></div>
+
+<div class="private-mouse-left-content">
+  <p>We're thinking ahead.</p>
+  <p>Forecasting what's next.</p>
+  <p>Making progress.</p>
+</div>
+
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const container = document.querySelector('.private-mouse-container');
+    const lines = [];
+    
+    const spacing = 100;
+    const rows = Math.ceil(window.innerHeight / spacing);
+    const cols = Math.ceil(window.innerWidth / spacing);
+
+    for (let i = 0; i < rows; i++) {
+      for (let j = 0; j < cols; j++) {
+        const line = document.createElement('div');
+        line.classList.add('private-mouse-line');
+        line.style.top = `${i * spacing}px`;
+        line.style.left = `${j * spacing}px`;
+        container.appendChild(line);
+        lines.push(line);
+      }
+    }
+
+    function updateLines(x, y) {
+      lines.forEach(line => {
+        const rect = line.getBoundingClientRect();
+        const lineCenterX = rect.left + rect.width / 2;
+        const lineCenterY = rect.top + rect.height / 2;
+
+        const dx = x - lineCenterX;
+        const dy = y - lineCenterY;
+        const angle = Math.atan2(dy, dx) * (180 / Math.PI);
+        line.style.transform = `rotate(${angle}deg)`;
+
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        let newColor = 'red';
+
+        if (distance < 250) {
+          if (distance < 40) newColor = '#FF8C00';
+          else if (distance < 80) newColor = '#FFD700';
+          else if (distance < 120) newColor = '#228B22';
+          else if (distance < 160) newColor = '#4169E1';
+          else if (distance < 200) newColor = '#0000CD';
+          else newColor = '#800080';
+        }
+
+        line.style.backgroundColor = newColor;
+      });
+    }
+
+    // Bắt sự kiện chuột trên desktop
+    window.addEventListener('mousemove', (e) => {
+      updateLines(e.clientX, e.clientY);
+    });
+
+    // Bắt sự kiện chạm trên mobile
+    window.addEventListener('touchmove', (e) => {
+      if (e.touches.length > 0) {
+        const touch = e.touches[0];
+        updateLines(touch.clientX, touch.clientY);
+      }
+    }, { passive: true });
+
+  });
+</script>
+
+
+{% schema %}
+{
+  "name": "Mouse Cursor Balance",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Private Mouse Follow Effect",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
